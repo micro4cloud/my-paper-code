@@ -1,0 +1,131 @@
+FULL FILE DESCRIPTION – ML-V2LC-CM PROJECT
+==========================================
+
+Project Title:
+ML-V2LC-CM: Hybrid Machine Learning Framework for Vehicular Visible Light Communication Channel Modeling
+
+Overview:
+---------
+This project provides a complete implementation of a hybrid machine learning-based framework for modeling Vehicular Visible Light Communication (V2LC) channels. The system integrates regression, ensemble learning concepts, and deep neural networks to estimate channel gain, path loss, and distortion under dynamic vehicular environments.
+
+The implementation is developed using Python and PyTorch, ensuring reproducibility and extensibility for research purposes.
+
+--------------------------------------------------
+FILE LIST AND DESCRIPTIONS
+--------------------------------------------------
+
+1. dataset.py
+   - Handles dataset loading and preprocessing.
+   - Supports NPZ format with feature-label structure.
+   - Implements PyTorch Dataset class.
+
+2. model.py
+   - Contains neural network architectures:
+     • Deep Neural Network (DNN)
+     • Long Short-Term Memory (LSTM)
+     • Hybrid Model (fusion-ready structure)
+   - Designed for regression-based channel prediction.
+
+3. train.py
+   - Implements training pipeline.
+   - Uses AdamW optimizer and Mean Squared Error loss.
+   - Supports batch training and model checkpoint saving.
+
+4. evaluate.py
+   - Performs model evaluation.
+   - Computes RMSE between predicted and actual values.
+   - Loads saved trained model.
+
+5. utils.py
+   - Utility functions for performance metrics:
+     • RMSE
+     • MAE
+     • R² Score
+   - Used during evaluation and analysis.
+
+6. main.py
+   - Entry point of the system.
+   - Executes training and evaluation sequentially.
+
+7. README.md
+   - Project documentation.
+   - Instructions for setup, execution, and dataset format.
+
+8. REQUIREMENTS.txt
+   - Lists dependencies:
+     • torch
+     • numpy
+     • scikit-learn
+
+9. LICENSE
+   - Open-source license (MIT License).
+
+--------------------------------------------------
+DATA FORMAT
+--------------------------------------------------
+
+Input dataset should be in NPZ format with:
+
+- features: numpy array of shape (N, D)
+- labels: numpy array of shape (N,)
+
+Example:
+--------
+features = [RSS, path_loss, angles, speed, ambient_light, ...]
+labels   = [channel_gain]
+
+--------------------------------------------------
+EXECUTION INSTRUCTIONS
+--------------------------------------------------
+
+Step 1: Install dependencies
+--------------------------------
+pip install -r REQUIREMENTS.txt
+
+Step 2: Run the program
+--------------------------------
+python main.py
+
+--------------------------------------------------
+OUTPUT
+--------------------------------------------------
+
+- model.pth → Trained model file
+- Console output:
+    • Training loss per epoch
+    • RMSE evaluation result
+
+--------------------------------------------------
+PERFORMANCE METRICS
+--------------------------------------------------
+
+The system evaluates:
+
+- Root Mean Square Error (RMSE)
+- Mean Absolute Error (MAE)
+- Coefficient of Determination (R²)
+
+--------------------------------------------------
+RESEARCH ALIGNMENT
+--------------------------------------------------
+
+This implementation corresponds to the proposed ML-V2LC-CM framework described in the manuscript:
+
+- Hybrid learning architecture
+- Multi-stage prediction pipeline
+- Real-time inference capability
+- Robust channel modeling under dynamic vehicular conditions
+
+--------------------------------------------------
+AUTHOR NOTE
+--------------------------------------------------
+
+This code is intended for academic and research purposes. It can be extended with:
+
+- Attention-based fusion mechanisms
+- Ensemble stacking models
+- Bayesian hyperparameter optimization
+
+--------------------------------------------------
+END OF FILE
+--------------------------------------------------

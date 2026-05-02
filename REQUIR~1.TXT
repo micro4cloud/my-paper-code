@@ -1,0 +1,98 @@
+REQUIREMENTS FILE – ML-V2LC-CM PROJECT
+======================================
+
+This file lists all required software dependencies to run the ML-V2LC-CM framework.
+
+--------------------------------------------------
+CORE DEPENDENCIES
+--------------------------------------------------
+
+Python Version:
+---------------
+Python 3.8 or higher is recommended.
+
+Libraries:
+----------
+
+1. torch
+   Version: >=1.12.0
+   Description:
+   PyTorch deep learning framework used for model development, training, and inference.
+
+2. numpy
+   Version: >=1.21.0
+   Description:
+   Numerical computing library for array operations and data handling.
+
+3. scikit-learn
+   Version: >=1.0.0
+   Description:
+   Machine learning utilities for preprocessing and evaluation metrics.
+
+--------------------------------------------------
+OPTIONAL (RECOMMENDED) DEPENDENCIES
+--------------------------------------------------
+
+4. matplotlib
+   Version: >=3.5.0
+   Description:
+   Used for plotting training curves and evaluation results.
+
+5. pandas
+   Version: >=1.3.0
+   Description:
+   Useful for dataset handling and analysis.
+
+6. tqdm
+   Version: >=4.60.0
+   Description:
+   Provides progress bars during training.
+
+--------------------------------------------------
+INSTALLATION INSTRUCTIONS
+--------------------------------------------------
+
+Method 1: Install all dependencies
+---------------------------------
+pip install torch numpy scikit-learn matplotlib pandas tqdm
+
+Method 2: Using virtual environment (recommended)
+------------------------------------------------
+python -m venv venv
+source venv/bin/activate     (Linux/Mac)
+venv\Scripts\activate        (Windows)
+
+pip install -r REQUIREMENTS.txt
+
+--------------------------------------------------
+HARDWARE REQUIREMENTS
+--------------------------------------------------
+
+Minimum:
+- CPU: Intel i5 / equivalent
+- RAM: 8 GB
+
+Recommended:
+- GPU: NVIDIA GPU (CUDA supported)
+- RAM: 16 GB or higher
+
+--------------------------------------------------
+TESTED ENVIRONMENT
+--------------------------------------------------
+
+- OS: Windows 10 / Linux (Ubuntu 20.04+)
+- Python: 3.9
+- PyTorch: 1.13
+- CUDA: 11.x (optional for GPU acceleration)
+
+--------------------------------------------------
+NOTES
+--------------------------------------------------
+
+- GPU acceleration is optional but recommended for faster training.
+- Ensure compatibility between PyTorch and CUDA versions if using GPU.
+- All dependencies are open-source and freely available.
+
+--------------------------------------------------
+END OF FILE
+--------------------------------------------------
